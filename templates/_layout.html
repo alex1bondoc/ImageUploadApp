@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tema IAP</title>
+		<style>
+			.img-style{
+				margin-top: 5px;
+			}
+		</style>
+		<link href="public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+				<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+					<svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+					<span class="fs-4">Tema IAP</span>
+				</a>
+
+				<ul class="nav nav-pills">
+					{% if session["email"] == "admin@gmail.com" %}
+					<li class="nav-item">
+						<a href="/upload" class="nav-link 
+							{% if "Upload" == page %}active{% endif %}">
+						{{ "Upload" }}
+					</a></li>
+					{% endif %}
+					{% for btn in buttons %}
+					<li class="nav-item">
+						<a href="{{ btn[1] }}" class="nav-link 
+							{% if btn[0] == page %}active{% endif %}">
+						{{ btn[0] }}
+					</a></li>
+					{% endfor %}
+				</ul>
+			</header>
+		</div>
+		{% block content %}{% endblock %}
+		
+		<script src="public/bootstrap/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

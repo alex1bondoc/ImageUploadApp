@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tema IAP1</title>
+		<link href="public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+		.form-signin {
+			max-width: 330px;
+			padding: 1rem;
+		}
+		</style>
+	</head>
+	<body class="d-flex align-items-center py-4 bg-body-tertiary">
+	<main class="form-signin w-100 m-auto">
+  <form method="post" action="/login">
+		{% if error: %}
+		<div class="alert alert-warning" role="alert">{{error}}</div>
+		{% endif %}
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" 
+						name="email" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" name="password" 
+						class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="form-check text-start my-3">
+    </div>
+    <button class="btn btn-primary w-70 py-1" type="submit">Sign in</button>
+  </form>
+</main>
+
+		<script src="public/bootstrap/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

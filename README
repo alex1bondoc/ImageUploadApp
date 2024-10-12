@@ -1,0 +1,5 @@
+Am realizat aceasta aplicatie dupa modelul celui facut la curs. O pagina principala home pe care se pot vedea pozele uploadate,
+o pagina de upload accesibila doar adminului(aceasta nu este vizibila pentru alti utilizatori), si o pagina de login pentru autentificare
+(aceasta este utila pentru admin care are dreptul de a uploada imagini). Uploadarea se face dupa modelul documentarii flask.
+Am folosit bootstrap pentru css. Pozele intiale din public/uploads sunt primele imagini care apar pe pagina home. 
+Emailul este admin@gmail.com parola este admin123 pentru a putea uploada o imagine.

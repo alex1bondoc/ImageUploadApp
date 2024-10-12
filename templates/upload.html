@@ -1,0 +1,10 @@
+{% extends "_layout.html" %}
+{% block content %}
+    <h1>Upload an image</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" class="form-control" required>
+
+        <button type="submit" value="Upload" class="btn btn-primary">Upload image</button>
+    </form>
+{% endblock %}
+

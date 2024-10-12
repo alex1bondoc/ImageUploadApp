@@ -1,0 +1,15 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+	<div class="container">
+		<h1 class="text-center">Photos</h1>
+		<div class="row">
+			{% for img in images %}
+				<div class="col-md-4">
+					<img src="../public/uploads/{{ img }}" alt="the image is bugged" class="img-style" width="400" height="256">
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
+
